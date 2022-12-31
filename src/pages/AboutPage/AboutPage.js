@@ -1,4 +1,3 @@
-// import {} from 'components';
 import Container from 'components/Container/Container';
 import s from './AboutPage.module.css';
 

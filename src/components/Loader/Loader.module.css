@@ -40,9 +40,9 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--second--accent-color);
+  background: var(--second-accent-color);
   right: -10px;
-  box-shadow: 0 0 20px var(--second--accent-color);
+  box-shadow: 0 0 20px var(--second-accent-color);
 }
 
 @keyframes animate {

@@ -1,0 +1,44 @@
+.overlay {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--second-color);
+  z-index: 100;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 0.95;
+  padding: 10px 20px;
+  color: var(--main-color);
+}
+.link:hover {
+  color: var(--second-color);
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+.activeLink {
+  composes: link;
+  color: var(--second-color);
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+.nav {
+  text-align: center;
+  margin-top: 30px;
+}
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}

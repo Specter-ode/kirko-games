@@ -9,8 +9,8 @@ const AdditionalSection = () => {
         <div className={s.block}>
           <h2 className={s.title}>Games</h2>
           <p className={s.text}>
-            Our dream is to create games where you can play with your friends,
-            <br /> compete on the battlefield and have the most fun.
+            Our dream is to create games where you can play with your friends, compete on the battlefield and have the
+            most fun.
           </p>
           <p>
             <Link to="/games" className={s.link}>

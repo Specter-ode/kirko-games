@@ -1,16 +1,12 @@
 .main {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 .title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 24px;
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 120px;
-}
+
 .container:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -20,19 +16,16 @@
 }
 .image {
   border-radius: 20px;
-  width: 400px;
 }
 .image:nth-child(2) {
   margin-top: 40px;
 }
-.descriptionBlock {
-  width: 50%;
-}
+
 .descriptionTitle {
   text-align: center;
   margin-bottom: 20px;
   font-size: 20px;
-  font-size: 500;
+  font-weight: 500;
 }
 .text {
   font-size: 20px;
@@ -43,4 +36,57 @@
   font-size: 20px;
   color: var(--main-color);
   font-weight: 700;
+}
+.backBtn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left: 53px;
+  top: 0;
+}
+.icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--main-color);
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 60px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .image {
+    width: 300px;
+  }
+  .descriptionBlock {
+    width: 50%;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .backBtn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    padding: 60px 0;
+  }
+  .container {
+    padding: 0 120px;
+  }
+  .image {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .descriptionTitle {
+    margin-top: 20px;
+  }
 }

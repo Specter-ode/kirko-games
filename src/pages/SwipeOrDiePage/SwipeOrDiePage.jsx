@@ -3,11 +3,20 @@ import gameImage from '../../assets/images/games/swipeOrDie7.png';
 import firstGameRule from '../../assets/images/games/rules1.png';
 import secondGameRule from '../../assets/images/games/rules2.png';
 import Container from 'components/Container/Container';
+import useWindowDimensions from 'helpers/hooks/useWindowDimensions';
+import { ReactComponent as BackArrow } from 'assets/icons/backArrow.svg';
+import { useNavigate } from 'react-router-dom';
 
 const SwipeOrDiePage = () => {
+  const { width } = useWindowDimensions();
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
   return (
     <main className={s.main}>
       <Container>
+        <button className={s.backBtn} type="button" onClick={goBack}>
+          <BackArrow className={s.icon} />
+        </button>
         <h2 className={s.title}>Swipe or die</h2>
         <div className={s.container}>
           <img src={gameImage} alt={'game Swipe Or Die'} className={s.image} />
@@ -24,33 +33,68 @@ const SwipeOrDiePage = () => {
             </p>
           </div>
         </div>
-        <div className={s.container}>
-          <div className={s.descriptionBlock}>
-            <img src={firstGameRule} alt={'game Swipe Or Die'} className={s.image} />
-            <img src={secondGameRule} alt={'game Swipe Or Die'} className={s.image} />
+        {width > 768 ? (
+          <div className={s.container}>
+            <div className={s.descriptionBlock}>
+              <img src={firstGameRule} alt={'game Swipe Or Die'} className={s.image} />
+              <img src={secondGameRule} alt={'game Swipe Or Die'} className={s.image} />
+            </div>
+            <div className={s.descriptionBlock}>
+              <h3 className={s.descriptionTitle}>Rules of the game</h3>
+              <p className={s.text}>Do you want to start winning in Swipe or Die ?</p>
+              <p className={s.text}>Then get acquainted with the main rules of the game.</p>
+              <p className={s.text}>
+                As soon as the timer starts you will have 1 minute to determine the strongest among you two!
+              </p>
+              <p className={s.text}>
+                Start immediately swiping in your direction and drag your opponent to the bomb, do not forget to use the
+                superpower located at the bottom of your screen. As soon as the super-ability begins to affect your
+                opponent, start swiping and pulling to your side as soon as possible.
+              </p>
+              <p className={s.text}>The super-powers only last a few seconds, so make the most of this, good luck!</p>
+              <p className={s.text}>
+                After a victory, you get cups and coins, after a defeat, you lose them. The number of cups determines at
+                what level you are, the more cups you have, the higher the level of players against whom you will fight.
+                The world to which you are will depend on the level. Remember, the one who swipes faster is the one who
+                moves on, good luck!
+              </p>
+              <p className={s.maintext}>Remember, the one who swipes faster is the one who moves on, good luck!</p>
+            </div>
           </div>
-          <div className={s.descriptionBlock}>
-            <h3 className={s.descriptionTitle}>Rules of the game</h3>
-            <p className={s.text}>Do you want to start winning in Swipe or Die ?</p>
-            <p className={s.text}>Then get acquainted with the main rules of the game.</p>
-            <p className={s.text}>
-              As soon as the timer starts you will have 1 minute to determine the strongest among you two!
-            </p>
-            <p className={s.text}>
-              Start immediately swiping in your direction and drag your opponent to the bomb, do not forget to use the
-              superpower located at the bottom of your screen. As soon as the super-ability begins to affect your
-              opponent, start swiping and pulling to your side as soon as possible.
-            </p>
-            <p className={s.text}>The super-powers only last a few seconds, so make the most of this, good luck!</p>
-            <p className={s.text}>
-              After a victory, you get cups and coins, after a defeat, you lose them. The number of cups determines at
-              what level you are, the more cups you have, the higher the level of players against whom you will fight.
-              The world to which you are will depend on the level. Remember, the one who swipes faster is the one who
-              moves on, good luck!
-            </p>
-            <p className={s.maintext}>Remember, the one who swipes faster is the one who moves on, good luck!</p>
-          </div>
-        </div>
+        ) : (
+          <>
+            {' '}
+            <div className={s.container}>
+              <img src={firstGameRule} alt={'game Swipe Or Die'} className={s.image} />
+              <div className={s.descriptionBlock}>
+                <h3 className={s.descriptionTitle}>Rules of the game</h3>
+                <p className={s.text}>Do you want to start winning in Swipe or Die ?</p>
+                <p className={s.text}>Then get acquainted with the main rules of the game.</p>
+                <p className={s.text}>
+                  As soon as the timer starts you will have 1 minute to determine the strongest among you two!
+                </p>
+                <p className={s.text}>
+                  Start immediately swiping in your direction and drag your opponent to the bomb, do not forget to use
+                  the superpower located at the bottom of your screen. As soon as the super-ability begins to affect
+                  your opponent, start swiping and pulling to your side as soon as possible.
+                </p>
+              </div>
+            </div>
+            <div className={s.container}>
+              <img src={secondGameRule} alt={'game Swipe Or Die'} className={s.image} />
+              <div className={s.descriptionBlock}>
+                <p className={s.text}>The super-powers only last a few seconds, so make the most of this, good luck!</p>
+                <p className={s.text}>
+                  After a victory, you get cups and coins, after a defeat, you lose them. The number of cups determines
+                  at what level you are, the more cups you have, the higher the level of players against whom you will
+                  fight. The world to which you are will depend on the level. Remember, the one who swipes faster is the
+                  one who moves on, good luck!
+                </p>
+                <p className={s.maintext}>Remember, the one who swipes faster is the one who moves on, good luck!</p>
+              </div>
+            </div>
+          </>
+        )}
       </Container>
     </main>
   );
