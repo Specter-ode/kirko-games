@@ -26,7 +26,7 @@
   margin: 20px 0;
   width: 60px;
   height: 60px;
-  fill: rgb(30, 32, 145);
+  fill: var(--second--accent-color);
 }
 
 .arrowsIcon {

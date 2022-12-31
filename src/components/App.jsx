@@ -1,3 +1,4 @@
+import s from './App.module.css';
 import PagesRoutes from 'PagesRoutes/PagesRoutes';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
@@ -6,7 +7,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <PagesRoutes />
+      <div className={s.container}>
+        <PagesRoutes />
+      </div>
       <Footer />
     </>
   );

@@ -1,3 +1,4 @@
+import PageLoader from 'components/Loader/Loader';
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -12,7 +13,7 @@ const GrabTheKeyPage = lazy(() => import('../pages/GrabTheKeyPage/GrabTheKeyPage
 
 const PagesRoutes = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/games/*" element={<GamesPage />} />
