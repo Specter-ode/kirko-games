@@ -1,0 +1,19 @@
+.section {
+  padding: 60px 120px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+.text {
+  font-size: 14px;
+  color: var(--main-color);
+}
+.text:not(:last-child) {
+  margin-bottom: 20px;
+}
+.link {
+  font-weight: 700;
+  text-decoration: none;
+}

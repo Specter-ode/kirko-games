@@ -1,0 +1,46 @@
+.main {
+  padding: 60px 0;
+}
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+}
+.container:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.imageBlock {
+  overflow: hidden;
+}
+.image {
+  border-radius: 20px;
+  width: 400px;
+}
+.image:nth-child(2) {
+  margin-top: 40px;
+}
+.descriptionBlock {
+  width: 50%;
+}
+.descriptionTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-size: 500;
+}
+.text {
+  font-size: 20px;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.maintext {
+  font-size: 20px;
+  color: var(--main-color);
+  font-weight: 700;
+}
