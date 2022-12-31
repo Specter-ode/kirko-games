@@ -1,7 +1,4 @@
 import s from './SupportPage.module.css';
-
-// import { } from 'components';
-import { useNavigate } from 'react-router-dom';
 import Container from 'components/Container/Container';
 
 const SupportPage = () => {

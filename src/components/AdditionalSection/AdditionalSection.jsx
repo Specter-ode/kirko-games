@@ -2,9 +2,6 @@ import Container from 'components/Container/Container';
 import { Link } from 'react-router-dom';
 import s from './AdditionalSection.module.css';
 
-import { ReactComponent as InstagramIcon } from 'assets/icons/instagram.svg';
-import { useState } from 'react';
-
 const AdditionalSection = () => {
   return (
     <section className={s.section}>
