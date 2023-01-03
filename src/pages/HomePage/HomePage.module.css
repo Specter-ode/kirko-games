@@ -32,22 +32,16 @@
   font-size: 16px;
   font-weight: 700;
   padding: 10px 15px;
+  margin-top: 10px;
+  text-align: center;
 }
-.gameSwipe {
-  composes: game;
-}
+
 .game:hover {
-  padding: 10px 15px;
   background-color: var(--main-color);
   color: var(--second-color);
   border-radius: 10px;
 }
-.gameSwipe:hover {
-  padding: 10px 15px;
-  background-color: var(--accent-color);
-  color: var(--second-color);
-  border-radius: 10px;
-}
+
 @media screen and (min-width: 768px) {
   .title {
     font-size: 20px;
@@ -55,27 +49,21 @@
   }
   .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+
+  .imageItem {
+    width: 220px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .imageBlock {
-    width: 390px;
-    height: 390px;
+  .imageItem {
+    width: 370px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .game {
-    text-align: center;
-    margin-top: 10px;
+  .imageItem:not(:last-child) {
     margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .game {
-    width: 150px;
-    text-align: center;
   }
 }

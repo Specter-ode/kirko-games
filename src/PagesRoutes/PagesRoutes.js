@@ -10,6 +10,7 @@ const SupportPage = lazy(() => import('../pages/SupportPage/SupportPage'));
 const TermsPage = lazy(() => import('../pages/TermsPage/TermsPage'));
 const SwipeOrDiePage = lazy(() => import('../pages/SwipeOrDiePage/SwipeOrDiePage'));
 const GrabTheKeyPage = lazy(() => import('../pages/GrabTheKeyPage/GrabTheKeyPage'));
+const Math512Page = lazy(() => import('../pages/Math512Page/Math512Page'));
 
 const PagesRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const PagesRoutes = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/games/*" element={<GamesPage />} />
+        <Route path="/games/math512" element={<Math512Page />} />
         <Route path="/games/swipe-or-die" element={<SwipeOrDiePage />} />
         <Route path="/games/grab-the-key" element={<GrabTheKeyPage />} />
         <Route path="/about-company" element={<AboutPage />} />

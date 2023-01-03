@@ -1,10 +1,12 @@
 import s from './GrabTheKeyPage.module.css';
-import grabImage from '../../assets/images/games/astro.png';
+import grabImage from '../../assets/images/games/grabGame.png';
 import Container from 'components/Container/Container';
 import { ReactComponent as BackArrow } from 'assets/icons/backArrow.svg';
 import { useNavigate } from 'react-router-dom';
+import useWindowDimensions from 'helpers/hooks/useWindowDimensions';
 
 const GrabTheKeyPage = () => {
+  const { width } = useWindowDimensions();
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
   return (
@@ -13,7 +15,14 @@ const GrabTheKeyPage = () => {
         <button className={s.backBtn} type="button" onClick={goBack}>
           <BackArrow className={s.icon} />
         </button>
-        <h2 className={s.title}>Grab the key</h2>
+        {width < 768 ? (
+          <>
+            <h2 className={s.titleMobile}>Grab the key </h2>
+            <p className={s.title}>(cooming soon)</p>
+          </>
+        ) : (
+          <h2 className={s.title}>Grab the key (cooming soon)</h2>
+        )}
         <div className={s.container}>
           <img src={grabImage} alt={'game Grab the key'} className={s.image} />
           <div className={s.descriptionBlock}>

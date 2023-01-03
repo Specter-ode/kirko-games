@@ -2,12 +2,6 @@
   padding: 30px 0;
 }
 
-.titleMobile {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
 .title {
   text-align: center;
   margin-bottom: 30px;
@@ -24,7 +18,7 @@
   border-radius: 20px;
 }
 .image:nth-child(2) {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .descriptionTitle {
@@ -43,6 +37,7 @@
   color: var(--main-color);
   font-weight: 700;
 }
+
 .backBtn {
   border: none;
   background-color: transparent;
@@ -74,6 +69,9 @@
   .title {
     margin-bottom: 40px;
   }
+  .image:nth-child(2) {
+    margin-top: 40px;
+  }
   .backBtn {
     display: none;
   }
@@ -92,7 +90,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .descriptionTitle {
-    margin-top: 20px;
+  .image {
+    margin-bottom: 20px;
   }
 }

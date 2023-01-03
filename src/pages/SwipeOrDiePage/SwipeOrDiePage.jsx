@@ -1,7 +1,7 @@
 import s from './SwipeOrDiePage.module.css';
-import gameImage from '../../assets/images/games/swipeOrDie7.png';
-import firstGameRule from '../../assets/images/games/rules1.png';
-import secondGameRule from '../../assets/images/games/rules2.png';
+import gameImage from '../../assets/images/games/swipeRules1.png';
+import firstGameRule from '../../assets/images/games/swipeRules2.png';
+import secondGameRule from '../../assets/images/games/swipeRules3.png';
 import Container from 'components/Container/Container';
 import useWindowDimensions from 'helpers/hooks/useWindowDimensions';
 import { ReactComponent as BackArrow } from 'assets/icons/backArrow.svg';
@@ -17,7 +17,14 @@ const SwipeOrDiePage = () => {
         <button className={s.backBtn} type="button" onClick={goBack}>
           <BackArrow className={s.icon} />
         </button>
-        <h2 className={s.title}>Swipe or die</h2>
+        {width < 768 ? (
+          <>
+            <h2 className={s.titleMobile}>Swipe or Die </h2>
+            <p className={s.title}>(cooming soon)</p>
+          </>
+        ) : (
+          <h2 className={s.title}>Swipe or Die (cooming soon)</h2>
+        )}
         <div className={s.container}>
           <img src={gameImage} alt={'game Swipe Or Die'} className={s.image} />
           <div className={s.descriptionBlock}>
@@ -63,7 +70,6 @@ const SwipeOrDiePage = () => {
           </div>
         ) : (
           <>
-            {' '}
             <div className={s.container}>
               <img src={firstGameRule} alt={'game Swipe Or Die'} className={s.image} />
               <div className={s.descriptionBlock}>
