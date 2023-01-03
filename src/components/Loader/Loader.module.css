@@ -1,9 +1,7 @@
 .container {
-  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 300px;
 }
 .circle {
   display: flex;
