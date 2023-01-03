@@ -91,7 +91,7 @@
 .block {
   overflow: hidden;
   border-radius: 10px;
-  width: 60px;
+  width: 50px;
 }
 .block:hover {
   transition: transform 0.5s;
@@ -119,6 +119,9 @@
   }
   .footer {
     padding: 30px 120px;
+  }
+  .block {
+    width: 60px;
   }
 }
 

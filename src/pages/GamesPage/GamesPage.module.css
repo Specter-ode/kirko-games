@@ -10,7 +10,6 @@
 
 .imageBlock {
   overflow: hidden;
-  width: 400px;
   border: 1px solid transparent;
   border-radius: 20px;
 }
@@ -29,8 +28,25 @@
   padding: 15px 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .imageBlock {
+    max-width: 440px;
+  }
+}
 @media screen and (min-width: 768px) {
   .main {
     padding: 60px 0;
+  }
+  .imageBlock {
+    width: 440px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    padding: 60px 0;
+  }
+  .imageBlock {
+    width: 550px;
   }
 }
