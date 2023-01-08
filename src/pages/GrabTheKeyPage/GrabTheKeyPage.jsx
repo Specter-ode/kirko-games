@@ -18,10 +18,10 @@ const GrabTheKeyPage = () => {
         {width < 768 ? (
           <>
             <h2 className={s.titleMobile}>Grab the key </h2>
-            <p className={s.title}>(cooming soon)</p>
+            <p className={s.title}>(coming soon)</p>
           </>
         ) : (
-          <h2 className={s.title}>Grab the key (cooming soon)</h2>
+          <h2 className={s.title}>Grab the key (coming soon)</h2>
         )}
         <div className={s.container}>
           <img src={grabImage} alt={'game Grab the key'} className={s.image} />

@@ -20,10 +20,10 @@ const SwipeOrDiePage = () => {
         {width < 768 ? (
           <>
             <h2 className={s.titleMobile}>Swipe or Die </h2>
-            <p className={s.title}>(cooming soon)</p>
+            <p className={s.title}>(coming soon)</p>
           </>
         ) : (
-          <h2 className={s.title}>Swipe or Die (cooming soon)</h2>
+          <h2 className={s.title}>Swipe or Die (coming soon)</h2>
         )}
         <div className={s.container}>
           <img src={gameImage} alt={'game Swipe Or Die'} className={s.image} />
