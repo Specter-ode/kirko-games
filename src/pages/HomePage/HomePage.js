@@ -19,7 +19,7 @@ const HomePage = () => {
             </Link>
           </li>
           <li className={s.imageItem}>
-            {' '}
+
             <Link to="/games/swipe-or-die" className={s.imageBlock}>
               <img src={swipeOrDie} alt={'game Swipe Or Die'} className={s.image} />
               <h2 className={s.game}>Swipe Or Die</h2>

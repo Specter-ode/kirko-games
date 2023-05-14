@@ -1,4 +1,5 @@
 .header {
+  height: 82px;
   position: relative;
   background-color: var(--main-color);
   display: flex;
